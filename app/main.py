@@ -8,10 +8,7 @@ app.include_router(login.router, prefix="/api/v1/login", tags=["login"])
 app.include_router(products.router, prefix="/api/v1/products", tags=["products"])
 
 origins = [
-    "http://localhost",
-    "http://127.0.0.1:8000",  # Ajusta el puerto según sea necesario
-    "http://127.0.0.1:8001",  # Ajusta el puerto según sea necesario
-    # Agrega más orígenes según sea necesario
+"*"
 ]
 
 app.add_middleware(
